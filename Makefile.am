@@ -1,14 +1,10 @@
-NULL = 
-
 #Build in these directories:
 
 SUBDIRS = \
-	src \
-	po \
-	$(NULL)
+	src
 
-github-contestdocdir = ${prefix}/doc/github-contest
-github-contestdoc_DATA = \
+github_contestdocdir = ${prefix}/doc/github-contest
+github_contestdoc_DATA = \
 	ChangeLog \
 	README \
 	COPYING \
@@ -18,16 +14,6 @@ github-contestdoc_DATA = \
 	$(NULL)
 
 EXTRA_DIST = \
-	$(github-contestdoc_DATA) \
-	intltool-extract.in \
-	intltool-merge.in \
-	intltool-update.in\
-	$(NULL)
+	$(github_contestdoc_DATA)
 
-DISTCLEANFILES = \
-	intltool-extract \
-	intltool-merge \
-	intltool-update
-	po/.intltool-merge-cache \
-	$(NULL)
-
+DISTCLEANFILES =
